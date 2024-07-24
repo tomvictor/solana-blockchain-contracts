@@ -13,12 +13,35 @@ pub mod solbet {
         user_data.age = data.age;
         Ok(())
     }
+
+    // create bet account -> save to dynamo
+    // store the program-id to dynamodb (aws) once created
+    // for every new bet, create new program
+    pub fn create_bet(name: &str) {}
+
+    // increment the account balance
+    // bet-account, user-account
+    pub fn place_bet(option: Options, amount: Options, account: Account) {}
+
+    // invoke the resolver after bet is finished
+    // resolve the bet
+    // split the balance and send to the accounts
+    // take the sol from the account balance
+    pub fn resolve() {}
+}
+
+enum Options {
+    Sol1,
+    Sol2,
+    Sol3,
+    Sol4,
 }
 
 #[account]
 pub struct UserInfo {
     pub name: String,
     pub age: u8,
+    pub balance: f64,
 }
 const PDA_SEED: &[u8] = b"hello";
 
@@ -36,4 +59,10 @@ pub struct Initialize<'info> {
     #[account(mut)]
     pub authority: Signer<'info>,
     pub system_program: Program<'info, System>,
+}
+
+pub struct BetEvent {}
+
+pub struct Account {
+    pub balance: u32,
 }
