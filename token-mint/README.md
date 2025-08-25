@@ -3,9 +3,8 @@
 
 programid: DVz4YvuRMneh17QPCFuJwbd54jL6UukGM4jxKYV9wLmg
 
-Mint Address: 2A7GTHjV8b6QD4mfNGZQWqFq7xQ7trkfKF4MxBhJWRDf
+Mint Address Mail token: Gt32QL95UyoDJnESc1sWm5DpsFoszoFUb9hmagqyYA1r
 
-Associated Token Account Address: 4TbB8RjgJ8UR1MtDf5VQeSz3PzDrezCCM7wQMmbjrjj9
 
 
 ----
