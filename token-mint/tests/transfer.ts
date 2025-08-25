@@ -1,29 +1,13 @@
-// import { describe, it } from 'node:test';
 // import * as anchor from '@coral-xyz/anchor';
 // import { getAssociatedTokenAddressSync } from '@solana/spl-token';
 // import { Keypair } from '@solana/web3.js';
-// import { PublicKey } from '@solana/web3.js';
-// import { BankrunProvider } from 'anchor-bankrun';
-// import { startAnchor } from 'solana-bankrun';
 // import type { TransferTokens } from '../target/types/transfer_tokens';
 
-// const IDL = require('../target/idl/transfer_tokens.json');
-// const PROGRAM_ID = new PublicKey(IDL.address);
-// const METADATA_PROGRAM_ID = new PublicKey('metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s');
-
-// describe('Transfer Tokens Bankrun', async () => {
-//   const context = await startAnchor(
-//     '',
-//     [
-//       { name: 'transfer_tokens', programId: PROGRAM_ID },
-//       { name: 'token_metadata', programId: METADATA_PROGRAM_ID },
-//     ],
-//     [],
-//   );
-//   const provider = new BankrunProvider(context);
+// describe('Transfer Tokens', () => {
+//   const provider = anchor.AnchorProvider.env();
 //   anchor.setProvider(provider);
 //   const payer = provider.wallet as anchor.Wallet;
-//   const program = new anchor.Program<TransferTokens>(IDL, provider);
+//   const program = anchor.workspace.TransferTokens as anchor.Program<TransferTokens>;
 
 //   const metadata = {
 //     name: 'Solana Gold',
